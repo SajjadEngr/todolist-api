@@ -5,6 +5,7 @@ import user from "./routes/user.route.js";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import "dotenv/config";
+import task from "./routes/task.route.js";
 
 // Initialize the Hono app
 const app = new Hono().basePath("/api/v1");
@@ -17,6 +18,7 @@ app.use(logger());
 
 // Define the /user route
 app.route("/user", user);
+app.route("/task", task);
 
 // Get the port from environment variables
 const port = Number(process.env.PORT) || 3000; // Default to port 3000 if not specified

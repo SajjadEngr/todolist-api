@@ -6,7 +6,7 @@ import {
   userUpdateSchema,
   tokenSchema,
 } from "../schemas/user.schema.js";
-import UserService from "./services/user.service.js";
+import UserService from "../services/user.service.js";
 
 const user = new Hono();
 const service = new UserService();
